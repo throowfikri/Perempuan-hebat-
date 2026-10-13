@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Sofi Aulia</title>
+<meta name="theme-color" content="#FFF7F2">
+<link rel="preload" href="assets/fonts/Besley-Medium.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#message">Lewati ke pesan</a>
+
+<div class="music" role="group" aria-label="Pemutar musik">
+  <button class="music__btn" id="musicBtn" type="button" aria-pressed="false" aria-label="Putar musik Kekal - Nadin Amizah">
+    <svg class="music__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9 3v11.3A3.5 3.5 0 1 0 11 17.5V8.2l7-1.6v5.7a3.5 3.5 0 1 0 2 3.2V3.9z" opacity=".95"/></svg>
+    <span class="music__label">Kekal - Nadin Amizah</span>
+    <svg class="music__state" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <path class="i-play" fill="currentColor" d="M8 5v14l11-7z"/>
+      <path class="i-pause" fill="currentColor" d="M7 5h4v14H7zm6 0h4v14h-4z"/>
+    </svg>
+  </button>
+  <audio id="audio" src="assets/audio/kekal-nadin-amizah.mp3" preload="none" loop></audio>
+</div>
+
+<main>
+  <div class="glow glow--a" aria-hidden="true"></div>
+  <div class="glow glow--b" aria-hidden="true"></div>
+
+  <section class="screen" id="opening" aria-labelledby="t-open">
+    <img class="octopus" src="assets/img/octopus.png" width="600" height="615" alt="Gurita pink yang lucu">
+    <h1 id="t-open">Olaaa UAL</h1>
+    <p class="sub">I made Something for you</p>
+    <a class="btn" href="#birthday" data-scroll>Open it <span aria-hidden="true">👉</span></a>
+  </section>
+
+  <section class="screen" id="birthday" aria-labelledby="t-bday">
+    <div class="bday">
+      <img class="bday__b1" src="assets/img/balloon-a.png" alt="" width="66" height="93">
+      <img class="bday__b2" src="assets/img/balloon-b.png" alt="" width="80" height="92">
+      <img class="bday__dog" src="assets/img/balloon-dog.png" alt="" width="106" height="81">
+      <h2 id="t-bday" class="pinkhead">Happy Birthday<sup>24<small>th</small></sup></h2>
+      <p class="h2 name">Sofi Aulia <img class="emoji" src="assets/img/cake.png" alt="kue ulang tahun" width="98" height="98"></p>
+    </div>
+    <p class="sub sub--soft">Today is all about you.</p>
+    <a class="btn" href="#message" data-scroll>Keep going <span aria-hidden="true">👇</span></a>
+  </section>
+
+  <section class="block" id="message" aria-labelledby="t-msg">
+    <h2 id="t-msg" class="h3">A little message for u</h2>
+    <article class="card">
+      <img class="card__kuromi" src="assets/img/kuromi-head.png" alt="" width="221" height="246">
+      <p>Wazapp bu manager donut</p>
+      <p>Cieee... 24 Tahun wkwkwk</p>
+      <p>Happy level up day Sofi Aulia!!! make a wish for u b’day, tahun ini kamu bertambah satu tahun dan jatah hidup kamu berkurang satu tahun, kamu sekarang makin dewasa. Terimakasih sudah lahir lahir di dunia ini dan bertahan hidup, banyak hal yang sudah kamu laluin dan masih banyak hal yang blm kamu laluin.</p>
+      <p>Apapun susahnya apapun sdihnya apapun senangnya kamuu nikmatin dan bersyukur, semoga banyak kebahagiaan yang kembali dari hari ini, semoga jalanmu untuk mencapai.masa depan yg cerah dipermudahkan, teruslah tumbuh, teruslah melangkah &amp; berbahagialah. I will always be proud of every step you've taken.</p>
+      <p>Selamat berkelana perempuan hebat, all my prayers are with you,<br>i will always support u from afar.</p>
+      <p>~ abang ketoprak</p>
+      <img class="card__sofi" src="assets/stickers/sofi-sticker-04-ramen-thumb.webp" alt="" width="640" height="530">
+    </article>
+  </section>
+
+  <section class="block block--gift" id="surprise" aria-labelledby="t-sur">
+    <h2 id="t-sur" class="h2 muted">One last surprise...</h2>
+    <p class="sub sub--20">I made something small for you</p>
+    <button class="gift" id="gift" type="button" aria-label="Buka kado">
+      <span class="gift__stage">
+        <img class="gift__body" src="assets/img/gift.png" width="900" height="730" alt="">
+        <img class="gift__lid" src="assets/img/gift.png" width="900" height="730" alt="">
+      </span>
+    </button>
+    <p class="hint" id="giftHint">Ketuk kadonya</p>
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+  </section>
+
+  <section class="block" id="stickers" aria-labelledby="t-st">
+    <h2 id="t-st" class="h2">Your Little Sticker Pack</h2>
+    <p class="sub sub--20">Made especially for you</p>
+    <ul class="grid" id="grid"></ul>
+    <button class="btn btn--20" id="dlAll" type="button">Download semua</button>
+    <p class="hint" id="count"></p>
+  </section>
+</main>
+
+<dialog class="viewer" id="viewer" aria-label="Preview sticker">
+  <button class="viewer__x" id="vClose" type="button" aria-label="Tutup preview">✕</button>
+  <div class="viewer__body">
+    <button class="viewer__nav" id="vPrev" type="button" aria-label="Sticker sebelumnya">‹</button>
+    <img id="vImg" alt="" width="640" height="640" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+    <button class="viewer__nav" id="vNext" type="button" aria-label="Sticker berikutnya">›</button>
+  </div>
+  <a class="btn btn--sm" id="vDl" href="#" download>Download PNG</a>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
